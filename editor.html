@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h2>編集モード</h2>
+
+<p id="difficulty"></p>
+
+<div id="board" class="grid"></div>
+
+<div>
+<select id="level">
+<option value="1">⭐ EASY</option>
+<option value="2">⭐⭐ NORMAL</option>
+<option value="3">⭐⭐⭐ HARD</option>
+<option value="4">⭐⭐⭐⭐ EXPERT</option>
+<option value="5">⭐⭐⭐⭐⭐ MASTER</option>
+<option value="6">⭐⭐⭐⭐⭐⭐ APPEND</option>
+</select>
+
+<button onclick="autoGenerate()">自動生成</button>
+</div>
+
+<div>
+<button onclick="save()">保存</button>
+<button onclick="exportURL()">URL共有</button>
+<button onclick="checkUnique()">唯一解チェック</button>
+<button onclick="checkErrors()">不備チェック</button>
+<button onclick="evaluate()">難易度評価</button>
+</div>
+
+<p id="result"></p>
+
+<script src="js/common.js"></script>
+<script src="js/solver.js"></script>
+<script src="js/generator.js"></script>
+<script src="js/editor.js"></script>
+
+</body>
+</html>

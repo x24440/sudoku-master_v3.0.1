@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h2>プレイモード</h2>
+
+<p id="difficulty"></p>
+
+<div id="board" class="grid"></div>
+
+<!-- 難易度選択 -->
+<div>
+<select id="level">
+<option value="1">⭐ EASY</option>
+<option value="2">⭐⭐ NORMAL</option>
+<option value="3">⭐⭐⭐ HARD</option>
+<option value="4">⭐⭐⭐⭐ EXPERT</option>
+<option value="5">⭐⭐⭐⭐⭐ MASTER</option>
+<option value="6">⭐⭐⭐⭐⭐⭐ APPEND</option>
+</select>
+<button onclick="generate()">新しく生成</button>
+</div>
+
+<!-- 操作 -->
+<div>
+<button id="memoBtn" onclick="toggleMemo()">メモ: OFF</button>
+<button onclick="check()">答え合わせ</button>
+<button onclick="reset()">リセット</button>
+</div>
+
+<div id="numpad" class="numpad"></div>
+
+<p id="result"></p>
+
+<script src="js/common.js"></script>
+<script src="js/solver.js"></script>
+<script src="js/generator.js"></script>
+<script src="js/play.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>しょうゆナンプレエディター</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="top">
+
+<div class="container">
+
+<h1 class="title">しょうゆナンプレエディター</h1>
+
+<p class="subtitle">
+数独を作る・遊ぶ・共有する<br>
+シンプルで使いやすいナンプレツール
+</p>
+
+<!-- 背景変更 -->
+<div class="card">
+<h2>背景変更</h2>
+<input type="color" id="bgColor">
+<button onclick="setBackground()">変更</button>
+<button onclick="resetBackground()">リセット</button>
+</div>
+
+<div class="card">
+<h2>編集モード</h2>
+<p>問題を作成・保存・共有できます</p>
+<button onclick="location.href='editor.html'">編集する</button>
+</div>
+
+<div class="card">
+<h2>プレイモード</h2>
+<p>問題を解いて楽しめます</p>
+<button onclick="location.href='play.html'">遊ぶ</button>
+</div>
+
+</div>
+
+<script src="js/common.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,134 @@
+body {
+font-family: sans-serif;
+text-align: center;
+margin: 0;
+transition: background 0.3s;
+}
+
+/* トップ */
+.top {
+background: linear-gradient(135deg, #e0f7ff, #f0e0ff);
+}
+
+.container {
+max-width: 500px;
+margin: auto;
+padding: 40px 20px;
+}
+
+.title {
+font-size: 28px;
+}
+
+.subtitle {
+font-size: 14px;
+margin-bottom: 30px;
+color: #555;
+}
+
+.card {
+background: white;
+padding: 20px;
+margin: 15px 0;
+border-radius: 10px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* ===== グリッド ===== */
+
+.grid {
+display: grid;
+grid-template-columns: repeat(9, 40px);
+gap: 0;
+justify-content: center;
+margin: 20px auto;
+border: 3px solid black; /* 外枠 */
+}
+
+.cell {
+width: 40px;
+height: 40px;
+font-size: 18px;
+display: flex;
+align-items: center;
+justify-content: center;
+border: 1px solid #888;
+background: white;
+box-sizing: border-box;
+}
+
+/* ===== 3×3 太線 ===== */
+
+/* 縦の太線 */
+.cell:nth-child(3n) {
+border-right: 3px solid black;
+}
+
+/* 横の太線 */
+.cell:nth-child(n+19):nth-child(-n+27),
+.cell:nth-child(n+46):nth-child(-n+54) {
+border-bottom: 3px solid black;
+}
+
+/* 左端補正 */
+.cell:nth-child(9n+1) {
+border-left: 0;
+}
+
+/* 上端補正 */
+.cell:nth-child(-n+9) {
+border-top: 0;
+}
+
+/* 固定マス */
+.fixed {
+background: #ddd;
+font-weight: bold;
+}
+
+/* メモ */
+.note-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+font-size: 10px;
+width: 100%;
+height: 100%;
+}
+
+.note {
+font-size: 10px;
+}
+
+/* 数字パッド */
+.numpad {
+display: grid;
+grid-template-columns: repeat(5, 50px);
+gap: 5px;
+justify-content: center;
+margin-top: 20px;
+}
+
+.numpad button {
+height: 40px;
+font-size: 16px;
+}
+
+/* 難易度カラー */
+.easy { background: #d4f8d4; }
+.normal { background: #d4e4ff; }
+.hard { background: #fff4cc; }
+.expert { background: #ffd4d4; }
+.master { background: #ead4ff; }
+.append {
+background: linear-gradient(135deg, #ffd4f0, #e0ccff);
+}
+
+/* ボタン */
+button {
+margin: 8px;
+padding: 10px 15px;
+border: none;
+border-radius: 8px;
+background: #4a90e2;
+color: white;
+}
