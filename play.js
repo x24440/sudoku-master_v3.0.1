@@ -244,4 +244,6 @@ Array.from({length:9},()=> new Set())
 );
 
 render();
+createNumpad();
+generate();
 }
